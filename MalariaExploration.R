@@ -1,4 +1,28 @@
 d<-read.csv(file="./Data/TychoMalariaUS.csv",stringsAsFactors = FALSE)
+
+
+#***DAN - notes added to explain, can move or delete when you understand
+dcu<-d[d$PartOfCumulativeCountSeries==1,]
+dnc<-d[d$PartOfCumulativeCountSeries==0,] #put a condition in the first dimension to take only the rows that meet that condition
+dim(d)
+dim(dcu)[1]+dim(dnc)[1]
+
+dwd<-d[d$PartOfCumulativeCountSeries==0 & d$Admin1ISO=="US-AK",]
+unique(dwd$Admin1ISO)
+unique(dwd$PartOfCumulativeCountSeries)
+
+#why does this make sense?
+m<-matrix(1:80,10,8)
+m[1:3,1:3]
+m[c(1,3,5),c(2,4,6)]
+m[c(T,T,T,F,F,F,F,F,F,F),c(1,2,3)]
+
+#also with vectors
+x<-rnorm(100)
+whichlt<-(x<0)
+x[whichlt]
+#***
+
 dim(d)
 names(d)
 class(d)
