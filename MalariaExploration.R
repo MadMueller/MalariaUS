@@ -1,4 +1,4 @@
-d<-read.csv(file="./Data/TychoMalraiaUS.csv",stringsAsFactors = FALSE)
+d<-read.csv(file="./Data/TychoMalariaUS.csv",stringsAsFactors = FALSE)
 dim(d)
 names(d)
 class(d)
